@@ -68,6 +68,10 @@ Data from the Marvel API is validated using Zod schemas to ensure the expected d
 
 - Start the development server with `npm run dev` for hot-reloading and dynamic page behavior.
 
+### How to use
+
+- To search for characters, enter the name to search for and press Enter.
+
 ## License 📝
 
 This project is licensed under the GNU General Public License (GPL). For more information, see the `LICENSE` file in this repository.

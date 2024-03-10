@@ -14,21 +14,23 @@ type Props = {
 
 const Card = ({ className, characterId, imageSrc, name }: Props) => {
   return (
-    <div className="relative h-64 w-48">
+    <div className="cut-corner group relative h-[15.375rem] w-[10.75rem] bg-secondary hover:bg-primary">
       <Link
-        className={classNames("cut-corner relative flex shrink-0 flex-col bg-secondary text-start", className)}
+        className={classNames("relative flex h-full shrink-0 flex-col text-start", className)}
         href={`${urls.character}/${characterId}`}
       >
         <Image
-          className="aspect-square border-b-2 border-primary object-fill"
+          className="aspect-[86/95] border-b-[5px] border-primary object-fill"
           src={imageSrc}
           alt={name}
-          width={200}
-          height={200}
+          width={172}
+          height={190}
         />
-        <div className="w-40 grow truncate p-4 text-[0.9rem] uppercase text-white">{name}</div>
+        <div className="flex w-36 grow items-center p-4">
+          <div className="truncate text-[0.9rem] uppercase text-white">{name}</div>
+        </div>
       </Link>
-      <HeartButton className="absolute bottom-6 right-4 p-2" characterId={characterId} size={15} />
+      <HeartButton className="absolute bottom-4 right-4 p-2" characterId={characterId} size={15} />
     </div>
   );
 };

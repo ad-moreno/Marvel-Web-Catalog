@@ -9,9 +9,9 @@ import { useFavoriteCharacters } from "#/features/contexts/FavoriteCharactersCon
 import Loading from "#/features/components/Loading";
 import { getCharactersByIds } from "#/features/content";
 
-const FavouritesPanel = () => {
+const FavoritesPanel = () => {
   const { favoriteCharacters } = useFavoriteCharacters();
-  // Using a ref to avoid reloading the content if the favourites change
+  // Using a ref to avoid reloading the content if the favorites change
   const chatacterIds = useRef(favoriteCharacters);
 
   const [characters, setCharacters] = useState<Character[]>([]);
@@ -44,6 +44,7 @@ const FavouritesPanel = () => {
 
   return (
     <div className="flex flex-col gap-y-6">
+      <div className="text-[1.75rem] font-bold lg:text-[2rem]">FAVORITES</div>
       <div className="flex flex-col gap-y-2">
         <Search onSearch={setName} disabled={loading} />
         <div className="text-xs">{filteredCharacters.length} RESULTS</div>
@@ -53,4 +54,4 @@ const FavouritesPanel = () => {
   );
 };
 
-export default FavouritesPanel;
+export default FavoritesPanel;

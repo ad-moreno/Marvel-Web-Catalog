@@ -18,7 +18,7 @@ export default function SearchResults({ characters }: Props) {
   });
 
   return (
-    <div className="flex flex-row flex-wrap justify-start gap-5">
+    <div className="flex flex-row flex-wrap justify-start gap-4">
       {cleanCharacters.map((character) => {
         const imageSrc = `${character.thumbnail!.path}.${character.thumbnail!.extension}`;
         return (

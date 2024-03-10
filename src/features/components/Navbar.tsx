@@ -19,9 +19,9 @@ const Navbar = ({ className, ...props }: ComponentProps<"nav">) => {
       {...props}
     >
       <Link href={urls.home}>
-        <Image className="min-w-[5rem]" src="/logo.svg" alt="marvel-logo" width={150} height={100} />
+        <Image className="min-w-[5rem]" src="/logo.svg" alt="marvel-logo" width={130} height={52} />
       </Link>
-      <Link className="flex flex-row flex-nowrap gap-x-4 p-4" href={urls.favourites}>
+      <Link className="flex flex-row flex-nowrap gap-x-2 p-4" href={urls.favorites}>
         <Heart size={25} filled={true} />
         <div className="min-w-4 text-white">{favoriteCharacters.length}</div>
       </Link>

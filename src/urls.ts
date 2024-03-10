@@ -1,7 +1,7 @@
 const urls = {
   home: "/",
   character: "/character",
-  favourites: "/favourites",
+  favorites: "/favorites",
 };
 
 export default urls;

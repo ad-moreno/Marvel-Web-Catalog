@@ -32,7 +32,7 @@ const ComicSummary = ({ className, comic, ...props }: Props) => {
   const year = getComicYear(comic);
   return (
     <div className={classNames("flex shrink-0 flex-col justify-center gap-y-2", className)} {...props}>
-      {!!imageSrc && <Image src={imageSrc} alt={`${title} comic`} width={200} height={100} />}
+      {!!imageSrc && <Image className="aspect-[2/3]" src={imageSrc} alt={`${title} comic`} width={168} height={252} />}
       <div className="w-48 font-semibold">{title}</div>
       <div className="text-sm leading-none">{year}</div>
     </div>

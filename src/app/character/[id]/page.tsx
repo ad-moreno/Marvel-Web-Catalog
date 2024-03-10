@@ -30,9 +30,9 @@ export default async function CharacterPage({ params }: { params: { id: string }
               <Image className="aspect-square object-fill" src={imageSrc} alt={`${name} image`} fill={true} />
             </div>
           )}
-          <div className="flex grow flex-col gap-8 px-4 pb-8 md:pb-0">
+          <div className="flex grow flex-col gap-6 px-4 pb-8 md:pb-0">
             <div className="flex flex-row items-center justify-between gap-x-8">
-              <h1 className="text-balance text-5xl font-bold uppercase">{name}</h1>
+              <h1 className="text-balance text-[2rem] font-bold uppercase xl:text-[2.5rem]">{name}</h1>
               <HeartButton size={35} characterId={id} />
             </div>
             <div>{description}</div>
@@ -40,8 +40,8 @@ export default async function CharacterPage({ params }: { params: { id: string }
         </div>
       </div>
       {comics.length > 0 && (
-        <div className="mx-auto flex w-full max-w-[82rem] flex-col gap-10 px-4 py-16">
-          <div className="text-4xl font-semibold">COMICS</div>
+        <div className="mx-auto flex w-full max-w-[82rem] flex-col gap-6 px-4 py-16">
+          <div className="text-[1.75rem] font-bold xl:text-[2rem]">COMICS</div>
           <div className="styled-scroll flex flex-row items-start gap-x-5 overflow-x-auto pb-5">
             {comics.map((comic, idx) => (
               <ComicSummary key={comic.id ? `comic-${comic.id}` : `${id}-comic-${idx}`} comic={comic} />
